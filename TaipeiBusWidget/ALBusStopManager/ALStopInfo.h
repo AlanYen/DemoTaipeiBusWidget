@@ -1,5 +1,5 @@
 //
-//  StopInfo.h
+//  ALStopInfo.h
 //  DemoTaipeiBusWidget
 //
 //  Created by AlanYen on 2016/2/17.
@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StopInfo : NSObject
+typedef NS_ENUM(NSUInteger, ALStopDirectionType) {
+    
+    ALStopDirectionTypeGo = 0,
+    ALStopDirectionTypeBack = 1,
+};
+
+@interface ALStopInfo : NSObject
 
 @property (strong, nonatomic) NSString *busId;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *status;
+@property (assign, nonatomic) NSInteger index;
+@property (assign, nonatomic) ALStopDirectionType direction;
 
 @end

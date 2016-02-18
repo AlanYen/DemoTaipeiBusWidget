@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0F2CB71C757CE300E40E79 /* ALStopInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F2CB61C757CE300E40E79 /* ALStopInfo.m */; };
+		2D0F2CBA1C757D0700E40E79 /* ALBusStopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D0F2CB91C757D0700E40E79 /* ALBusStopManager.m */; };
 		2D568BDC1C745C490038C24C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D568BDB1C745C490038C24C /* main.m */; };
 		2D568BDF1C745C490038C24C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D568BDE1C745C490038C24C /* AppDelegate.m */; };
 		2D568BE21C745C490038C24C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D568BE11C745C490038C24C /* ViewController.m */; };
@@ -19,7 +21,7 @@
 		2D568C171C745D360038C24C /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D568C161C745D360038C24C /* TodayViewController.m */; };
 		2D568C1A1C745D360038C24C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D568C181C745D360038C24C /* MainInterface.storyboard */; };
 		2D568C1E1C745D360038C24C /* TaipeiBusWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2D568C111C745D360038C24C /* TaipeiBusWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2D568C261C7462C60038C24C /* StopInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D568C251C7462C60038C24C /* StopInfo.m */; };
+		2DFD54051C75C2B10018130C /* exchange.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD54041C75C2B10018130C /* exchange.png */; };
 		AF00D916570E768ADD87F2B8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F5003DF0A9425207178E35 /* libPods.a */; };
 		B1D992BD7C4F911858EAB219 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F5003DF0A9425207178E35 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -64,6 +66,10 @@
 
 /* Begin PBXFileReference section */
 		18593E1B3C8392D109ED56BB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2D0F2CB51C757CE300E40E79 /* ALStopInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALStopInfo.h; sourceTree = "<group>"; };
+		2D0F2CB61C757CE300E40E79 /* ALStopInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALStopInfo.m; sourceTree = "<group>"; };
+		2D0F2CB81C757D0700E40E79 /* ALBusStopManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALBusStopManager.h; sourceTree = "<group>"; };
+		2D0F2CB91C757D0700E40E79 /* ALBusStopManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALBusStopManager.m; sourceTree = "<group>"; };
 		2D568BD71C745C490038C24C /* DemoTaipeiBusWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoTaipeiBusWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D568BDB1C745C490038C24C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2D568BDD1C745C490038C24C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,8 +92,7 @@
 		2D568C161C745D360038C24C /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		2D568C191C745D360038C24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2D568C1B1C745D360038C24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D568C241C7462C60038C24C /* StopInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopInfo.h; sourceTree = "<group>"; };
-		2D568C251C7462C60038C24C /* StopInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopInfo.m; sourceTree = "<group>"; };
+		2DFD54041C75C2B10018130C /* exchange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exchange.png; sourceTree = "<group>"; };
 		96F5003DF0A9425207178E35 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC0B89CA92B3ECC375EBD44 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +139,17 @@
 				18593E1B3C8392D109ED56BB /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2D0F2CB41C757CE300E40E79 /* ALBusStopManager */ = {
+			isa = PBXGroup;
+			children = (
+				2D0F2CB51C757CE300E40E79 /* ALStopInfo.h */,
+				2D0F2CB61C757CE300E40E79 /* ALStopInfo.m */,
+				2D0F2CB81C757D0700E40E79 /* ALBusStopManager.h */,
+				2D0F2CB91C757D0700E40E79 /* ALBusStopManager.m */,
+			);
+			path = ALBusStopManager;
 			sourceTree = "<group>";
 		};
 		2D568BCE1C745C490038C24C = {
@@ -205,14 +221,22 @@
 		2D568C141C745D360038C24C /* TaipeiBusWidget */ = {
 			isa = PBXGroup;
 			children = (
+				2DFD54031C75C2A10018130C /* Images */,
+				2D0F2CB41C757CE300E40E79 /* ALBusStopManager */,
 				2D568C151C745D360038C24C /* TodayViewController.h */,
 				2D568C161C745D360038C24C /* TodayViewController.m */,
 				2D568C181C745D360038C24C /* MainInterface.storyboard */,
 				2D568C1B1C745D360038C24C /* Info.plist */,
-				2D568C241C7462C60038C24C /* StopInfo.h */,
-				2D568C251C7462C60038C24C /* StopInfo.m */,
 			);
 			path = TaipeiBusWidget;
+			sourceTree = "<group>";
+		};
+		2DFD54031C75C2A10018130C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2DFD54041C75C2B10018130C /* exchange.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		DBBCE43280C017745422B4CC /* Frameworks */ = {
@@ -380,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DFD54051C75C2B10018130C /* exchange.png in Resources */,
 				2D568C1A1C745D360038C24C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,7 +536,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D568C171C745D360038C24C /* TodayViewController.m in Sources */,
-				2D568C261C7462C60038C24C /* StopInfo.m in Sources */,
+				2D0F2CB71C757CE300E40E79 /* ALStopInfo.m in Sources */,
+				2D0F2CBA1C757D0700E40E79 /* ALBusStopManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

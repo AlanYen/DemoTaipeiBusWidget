@@ -1,15 +1,13 @@
 //
-//  StopInfo.m
+//  ALStopInfo.m
 //  DemoTaipeiBusWidget
 //
 //  Created by AlanYen on 2016/2/17.
 //  Copyright © 2016年 17Life. All rights reserved.
 //
 
-#import "StopInfo.h"
+#import "ALStopInfo.h"
 
-@implementation StopInfo
-
-
+@implementation ALStopInfo
 
 @end

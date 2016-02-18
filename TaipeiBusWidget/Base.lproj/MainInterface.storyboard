@@ -17,15 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-At-SCa">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="t3g-At-SCa">
+                                <rect key="frame" x="44" y="0.0" width="276" height="74"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="2dK-Q7-vJx" detailTextLabel="yg9-JO-5fo" rowHeight="44" style="IBUITableViewCellStyleValue1" id="oby-yO-tOg">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="276" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oby-yO-tOg" id="lQZ-O3-YtV">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="276" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2dK-Q7-vJx">
@@ -36,7 +36,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yg9-JO-5fo">
-                                                    <rect key="frame" x="249" y="12" width="56" height="20"/>
+                                                    <rect key="frame" x="205" y="12" width="56" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -51,11 +51,37 @@
                                     <outlet property="delegate" destination="M4Y-Lb-cyx" id="aL8-sn-5bi"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Vv8-4c-X5j">
+                                <rect key="frame" x="150" y="27" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="cIu-16-k6e"/>
+                                    <constraint firstAttribute="width" constant="20" id="k0U-4W-Crd"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSC-R6-NtZ">
+                                <rect key="frame" x="11" y="26" width="22" height="22"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="22" id="GhJ-NB-VfX"/>
+                                    <constraint firstAttribute="height" constant="22" id="oKC-g4-Zxo"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="exchange.png">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onExchangeButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="pAz-fN-pa0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="oSC-R6-NtZ" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="6Ch-O6-Txy"/>
                             <constraint firstAttribute="bottom" secondItem="t3g-At-SCa" secondAttribute="bottom" id="GKM-ed-TMV"/>
                             <constraint firstAttribute="trailing" secondItem="t3g-At-SCa" secondAttribute="trailing" id="Hgp-65-5SE"/>
-                            <constraint firstItem="t3g-At-SCa" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="h3Z-MV-2eE"/>
+                            <constraint firstItem="oSC-R6-NtZ" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="SdV-a7-HLZ"/>
+                            <constraint firstItem="t3g-At-SCa" firstAttribute="leading" secondItem="oSC-R6-NtZ" secondAttribute="trailing" constant="11" id="bSJ-5t-fyb"/>
+                            <constraint firstItem="Vv8-4c-X5j" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="fiA-LU-Msk"/>
+                            <constraint firstItem="t3g-At-SCa" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="44" id="h3Z-MV-2eE"/>
+                            <constraint firstItem="Vv8-4c-X5j" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="izK-Gd-iuU"/>
                             <constraint firstItem="t3g-At-SCa" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="z2h-Dk-VgJ"/>
                         </constraints>
                     </view>
@@ -66,6 +92,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="74"/>
                     <connections>
+                        <outlet property="exchangeButton" destination="oSC-R6-NtZ" id="zqb-5h-IcG"/>
+                        <outlet property="indicatorView" destination="Vv8-4c-X5j" id="e7B-BJ-ut8"/>
                         <outlet property="tableView" destination="t3g-At-SCa" id="c9m-dg-WpL"/>
                     </connections>
                 </viewController>
@@ -74,4 +102,7 @@
             <point key="canvasLocation" x="516" y="285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="exchange.png" width="512" height="512"/>
+    </resources>
 </document>
