@@ -21,6 +21,7 @@
 		2D568C171C745D360038C24C /* TodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D568C161C745D360038C24C /* TodayViewController.m */; };
 		2D568C1A1C745D360038C24C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D568C181C745D360038C24C /* MainInterface.storyboard */; };
 		2D568C1E1C745D360038C24C /* TaipeiBusWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2D568C111C745D360038C24C /* TaipeiBusWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2D7395951C76B549003638B0 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7395941C76B549003638B0 /* refresh.png */; };
 		2DFD54051C75C2B10018130C /* exchange.png in Resources */ = {isa = PBXBuildFile; fileRef = 2DFD54041C75C2B10018130C /* exchange.png */; };
 		AF00D916570E768ADD87F2B8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F5003DF0A9425207178E35 /* libPods.a */; };
 		B1D992BD7C4F911858EAB219 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F5003DF0A9425207178E35 /* libPods.a */; };
@@ -92,6 +93,7 @@
 		2D568C161C745D360038C24C /* TodayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodayViewController.m; sourceTree = "<group>"; };
 		2D568C191C745D360038C24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		2D568C1B1C745D360038C24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D7395941C76B549003638B0 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		2DFD54041C75C2B10018130C /* exchange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exchange.png; sourceTree = "<group>"; };
 		96F5003DF0A9425207178E35 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC0B89CA92B3ECC375EBD44 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		2DFD54031C75C2A10018130C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2D7395941C76B549003638B0 /* refresh.png */,
 				2DFD54041C75C2B10018130C /* exchange.png */,
 			);
 			path = Images;
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DFD54051C75C2B10018130C /* exchange.png in Resources */,
+				2D7395951C76B549003638B0 /* refresh.png in Resources */,
 				2D568C1A1C745D360038C24C /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

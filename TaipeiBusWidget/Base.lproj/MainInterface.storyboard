@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -32,7 +33,7 @@
                                                     <rect key="frame" x="15" y="12" width="32" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yg9-JO-5fo">
@@ -58,30 +59,69 @@
                                     <constraint firstAttribute="width" constant="20" id="k0U-4W-Crd"/>
                                 </constraints>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSC-R6-NtZ">
-                                <rect key="frame" x="11" y="26" width="22" height="22"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdV-rw-8Q7" userLabel="TopView">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TxR-8o-c5b">
+                                        <rect key="frame" x="10" y="6" width="25" height="25"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="F1s-WA-QLk"/>
+                                            <constraint firstAttribute="height" constant="25" id="pKW-Rs-DpM"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="refresh.png">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onRefreshButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="eTC-MP-VVU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="GhJ-NB-VfX"/>
-                                    <constraint firstAttribute="height" constant="22" id="oKC-g4-Zxo"/>
+                                    <constraint firstAttribute="width" constant="44" id="1rI-0f-ag4"/>
+                                    <constraint firstItem="TxR-8o-c5b" firstAttribute="centerX" secondItem="GdV-rw-8Q7" secondAttribute="centerX" id="3u6-wx-5gr"/>
+                                    <constraint firstItem="TxR-8o-c5b" firstAttribute="centerY" secondItem="GdV-rw-8Q7" secondAttribute="centerY" id="Xxt-Rl-orQ"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="exchange.png">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="onExchangeButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="pAz-fN-pa0"/>
-                                </connections>
-                            </button>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-se-62b" userLabel="BotomView">
+                                <rect key="frame" x="0.0" y="37" width="44" height="37"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oSC-R6-NtZ">
+                                        <rect key="frame" x="10" y="6" width="25" height="25"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="P1h-Zx-dBG"/>
+                                            <constraint firstAttribute="height" constant="25" id="YPp-2b-T5l"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="exchange.png">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onExchangeButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="pAz-fN-pa0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="oSC-R6-NtZ" firstAttribute="centerY" secondItem="Fi7-se-62b" secondAttribute="centerY" id="jn7-Nu-O0a"/>
+                                    <constraint firstItem="oSC-R6-NtZ" firstAttribute="centerX" secondItem="Fi7-se-62b" secondAttribute="centerX" id="oVu-Gy-Jh6"/>
+                                    <constraint firstAttribute="width" constant="44" id="zv4-7K-Nwb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="oSC-R6-NtZ" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="6Ch-O6-Txy"/>
+                            <constraint firstItem="Fi7-se-62b" firstAttribute="height" secondItem="S3S-Oj-5AN" secondAttribute="height" multiplier="1:2" id="Dgf-hS-BrF"/>
                             <constraint firstAttribute="bottom" secondItem="t3g-At-SCa" secondAttribute="bottom" id="GKM-ed-TMV"/>
                             <constraint firstAttribute="trailing" secondItem="t3g-At-SCa" secondAttribute="trailing" id="Hgp-65-5SE"/>
-                            <constraint firstItem="oSC-R6-NtZ" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="SdV-a7-HLZ"/>
-                            <constraint firstItem="t3g-At-SCa" firstAttribute="leading" secondItem="oSC-R6-NtZ" secondAttribute="trailing" constant="11" id="bSJ-5t-fyb"/>
+                            <constraint firstItem="GdV-rw-8Q7" firstAttribute="height" secondItem="S3S-Oj-5AN" secondAttribute="height" multiplier="1:2" id="Yn3-X5-kf4"/>
                             <constraint firstItem="Vv8-4c-X5j" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="fiA-LU-Msk"/>
                             <constraint firstItem="t3g-At-SCa" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="44" id="h3Z-MV-2eE"/>
+                            <constraint firstItem="GdV-rw-8Q7" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="hP8-Er-D8r"/>
                             <constraint firstItem="Vv8-4c-X5j" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="izK-Gd-iuU"/>
+                            <constraint firstItem="Fi7-se-62b" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="ww0-UZ-Ljr"/>
+                            <constraint firstAttribute="bottom" secondItem="Fi7-se-62b" secondAttribute="bottom" id="x57-gb-IKf"/>
+                            <constraint firstItem="GdV-rw-8Q7" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="yMp-j9-vrx"/>
                             <constraint firstItem="t3g-At-SCa" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="z2h-Dk-VgJ"/>
                         </constraints>
                     </view>
@@ -94,6 +134,7 @@
                     <connections>
                         <outlet property="exchangeButton" destination="oSC-R6-NtZ" id="zqb-5h-IcG"/>
                         <outlet property="indicatorView" destination="Vv8-4c-X5j" id="e7B-BJ-ut8"/>
+                        <outlet property="refreshButton" destination="TxR-8o-c5b" id="leO-AZ-vhV"/>
                         <outlet property="tableView" destination="t3g-At-SCa" id="c9m-dg-WpL"/>
                     </connections>
                 </viewController>
@@ -104,5 +145,6 @@
     </scenes>
     <resources>
         <image name="exchange.png" width="512" height="512"/>
+        <image name="refresh.png" width="800" height="800"/>
     </resources>
 </document>

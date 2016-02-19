@@ -17,6 +17,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIButton *exchangeButton;
+@property (weak, nonatomic) IBOutlet UIButton *refreshButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicatorView;
 @property (strong, nonatomic) NSString *goStopName;
 @property (strong, nonatomic) NSString *backStopName;
@@ -29,12 +30,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setPreferredContentSize:CGSizeMake(self.view.frame.size.width, 74.0)];
     [self setup];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     [[ALBusStopManager sharedManager] getData];
 }
 
@@ -60,6 +63,12 @@
 }
 
 #pragma mark - 按鍵事件
+
+- (IBAction)onRefreshButtonPressed:(id)sender {
+
+    NSLog(@"onExchangeButtonPressed");
+    [[ALBusStopManager sharedManager] getData];
+}
 
 - (IBAction)onExchangeButtonPressed:(id)sender {
     
@@ -91,6 +100,8 @@
             // 準備開始
             [weakSelf.exchangeButton setAlpha:0.0];
             [weakSelf.exchangeButton setEnabled:NO];
+            [weakSelf.refreshButton setAlpha:0.0];
+            [weakSelf.refreshButton setEnabled:NO];
             [weakSelf.tableView setAlpha:0.0];
             [weakSelf.indicatorView setHidden:NO];
             [weakSelf.indicatorView startAnimating];
@@ -122,9 +133,10 @@
             
             [weakSelf.tableView setAlpha:1.0];
             
+            [weakSelf.refreshButton setAlpha:1.0];
+            [weakSelf.refreshButton setEnabled:YES];
             [weakSelf.exchangeButton setAlpha:1.0];
             [weakSelf.exchangeButton setEnabled:YES];
-
             NSLog(@"(更新成功)顯示資料");
         });
     };
@@ -209,8 +221,8 @@
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.textColor = [UIColor whiteColor];
     if (stopInfo) {
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", stopInfo.busId, stopInfo.name];
-        cell.detailTextLabel.text = stopInfo.status;
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", stopInfo.busId, stopInfo.status];
+        cell.detailTextLabel.text = stopInfo.name;
     }
     else {
         cell.textLabel.text = @"";
